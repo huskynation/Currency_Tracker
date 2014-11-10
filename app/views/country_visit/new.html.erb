@@ -1,0 +1,21 @@
+<%- model_class = Country_visit -%>
+<div style="margin-top: 50px; margin-top: 8vh">
+<% if @country_visit.errors.any? %>
+    <div class="alert alert-error">
+      <h4><%= pluralize(@country_visit.errors.count, "error") %> prohibited this reservation from being saved:</h3>
+
+      <ul>
+      <% @country_visit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="page-header">
+  <h1>Visit Country</h1>
+</div>
+<%= render :partial => 'form' %>
+
+</div>

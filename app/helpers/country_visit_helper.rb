@@ -1,0 +1,2 @@
+module CountryVisitHelper
+end
