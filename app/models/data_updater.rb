@@ -38,20 +38,20 @@ class DataUpdater
     end
   end
 
-  # Returns a Hash with the following structure:
-  #   { :currencies => [
-  #       { :name => "Currency Name",
-  #         :code => "Currency Code",
-  #         :country_code => "Country Code"
-  #       }
-  #     ],
-  #
-  #     :countries => [
-  #       { :name => "Country Name",
-  #         :code => "Country Code"
-  #       }
-  #     ]
-  #   }
+  Returns a Hash with the following structure:
+    { :currencies => [
+        { :name => "Currency Name",
+          :code => "Currency Code",
+          :country_code => "Country Code"
+        }
+      ],
+  
+      :countries => [
+        { :name => "Country Name",
+          :code => "Country Code"
+        }
+      ]
+    }
   def parse_response( response = get_soap_response )
     doc = Nokogiri::XML::Document.parse( response.to_hash[:get_currencies_response][:get_currencies_result] )
 

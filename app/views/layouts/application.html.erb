@@ -18,10 +18,17 @@
   </nav>
 </header>
 
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <%= yield %>
 
 <footer>
-  CurrencyTracker &copy; Copyright 2011 by Smart Enterprises.
+  CurrencyTracker &copy; Copyright 2014 by Smart Enterprises.
 </footer>
 </body>
 </html>

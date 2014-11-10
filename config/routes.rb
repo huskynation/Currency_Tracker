@@ -1,5 +1,9 @@
 CurrencyTracker::Application.routes.draw do
-  root :to => "currencies#index"
+  devise_for :users
+
+  get "static_pages/login"
+
+  root :to => "static_pages#login"
   
   resources :countries, :except => [:new, :destroy]
 
