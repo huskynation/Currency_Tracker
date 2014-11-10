@@ -4,16 +4,16 @@ class Currency < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :code
-  validates_uniqueness_of :code, :allow_blank => true
+  validates_uniqueness_of :code, allow_blank: true
 
   belongs_to :country
 
   def self.collected
-    all.select {|currency| currency.collected? }
+    all.select(&:collected?)
   end
 
   def self.not_collected
-    all.reject {|currency| currency.collected? }
+    all.reject(&:collected?)
   end
 
   def collected?

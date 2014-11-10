@@ -5,20 +5,20 @@ Feature: Manage countries
 
   Scenario: List Countries
     Given the following countries exist:
-      |name|code|visited|
-      |CountryOne|c1|false|
-      |CountryTwo|c2|false|
-      |CountryThree|c3|true|
-      |CountryFour|c4|true|
-      |CountryFive|c5|true|
+      | name         | code | visited |
+      | CountryOne   | c1   | false   |
+      | CountryTwo   | c2   | false   |
+      | CountryThree | c3   | true    |
+      | CountryFour  | c4   | true    |
+      | CountryFive  | c5   | true    |
     And I am on the countries page
     Then I should see the following table:
-      |Name|Code|Status|
-      |CountryOne|c1|Not Visited|
-      |CountryTwo|c2|Not Visited|
-      |CountryThree|c3|Visited|
-      |CountryFour|c4|Visited|
-      |CountryFive|c5|Visited|
+      | Name         | Code | Status      |
+      | CountryOne   | c1   | Not Visited |
+      | CountryTwo   | c2   | Not Visited |
+      | CountryThree | c3   | Visited     |
+      | CountryFour  | c4   | Visited     |
+      | CountryFive  | c5   | Visited     |
 
   Scenario: Visit Country
     Given I am on a country page

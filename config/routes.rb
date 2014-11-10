@@ -1,13 +1,15 @@
 CurrencyTracker::Application.routes.draw do
   devise_for :users
 
-  get "static_pages/login"
+  get 'static_pages/login'
 
-  root :to => "static_pages#login"
-  
-  resources :countries, :except => [:new, :destroy]
+  root to: 'static_pages#login'
 
-  resources :currencies, :only => [:index, :show]
+  resources :countries, except: [:new, :destroy]
+
+  resources :currencies, only: [:index, :show]
+
+  resources :country_visits
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

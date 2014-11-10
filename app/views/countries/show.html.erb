@@ -17,11 +17,11 @@
 
 <p>
   <b>Currencies:</b>
-  <ul>
-    <% @country.currencies.each do |currency| %>
+<ul>
+  <% @country.currencies.each do |currency| %>
       <li><%= link_to currency.name, currency %></li>
-    <% end %>
-  </ul>
+  <% end %>
+</ul>
 </p>
 
 <%= link_to 'Edit', edit_country_path(@country) %> |

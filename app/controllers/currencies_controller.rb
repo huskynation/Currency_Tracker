@@ -6,7 +6,7 @@ class CurrenciesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @currencies }
+      format.xml { render xml: @currencies }
     end
   end
 
@@ -17,7 +17,7 @@ class CurrenciesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @currency }
+      format.xml { render xml: @currency }
     end
   end
 end

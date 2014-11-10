@@ -14,7 +14,7 @@ group :development do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
 end
 
 group :assets do
