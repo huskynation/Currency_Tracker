@@ -3,12 +3,14 @@ class CountriesController < ApplicationController
   # GET /countries.xml
   def index
     @countries = Country.all
+    # @countries = Country.where(:code=>'us')
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml { render xml: @countries }
     end
   end
+
 
   # GET /countries/1
   # GET /countries/1.xml

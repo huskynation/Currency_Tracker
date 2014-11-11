@@ -27,6 +27,9 @@ class CountryVisitController < ApplicationController
         render "new"
       end
 
+      def show
+        @country_visit = Country_visit.find_all_by_visited(true)
+
       def visited_by
         User.find_by_id(self.user.find_by_id)
 end
