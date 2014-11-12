@@ -7,8 +7,14 @@ gem 'sqlite3'
 gem 'savon', '~>1.0'
 gem 'nokogiri'
 gem 'devise'
+gem 'pry'
+
+gem 'pry-remote'
+gem 'pry-stack_explorer'
+gem 'pry-debugger'
 
 group :development do
+  gem 'pry-rails', '~> 0.3.2'
   gem 'capybara'
   gem 'database_cleaner'
 end
